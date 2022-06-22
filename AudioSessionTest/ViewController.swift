@@ -132,6 +132,16 @@ class ViewController: UIViewController {
 
     }
     
+    func checkHeadphonesIn() {
+        
+        let  currentRoute = AVAudioSession.sharedInstance().currentRoute
+        currentRoute.outputs.forEach { (item) in
+            if item.portType == .headphones {
+                print("headphones are plugged in")
+            }
+        }
+    }
+    
     @objc func interruptionHandle(_ note: NSNotification) {
 
        guard let value = note.userInfo?["AVAudioSessionInterruptionTypeKey"] else { return }

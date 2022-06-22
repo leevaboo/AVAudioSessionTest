@@ -1,0 +1,3 @@
+#简单介绍AVAudioSession的使用情况
+分别通过测试验证不同的Category和部分CategoryOptions的表现效果
+已经部分监听和检测
